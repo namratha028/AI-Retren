@@ -1,30 +1,142 @@
-# AI Spiral Dynamics
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+# RETVR: AI-Powered Voice Analysis Platform for Spiral Dynamics
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/2100099002csit-7240s-projects/v0-ai-spiral-dynamics)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/GtsJworsde5)
+RETVR is an AI-powered voice and text analysis platform that helps users track their spiritual and emotional development based on Spiral Dynamics theory.
 
-## Overview
+## 🌟 Features
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+- 🎤 Voice Recording and Real-time Transcription
+- 🧠 NLP-based Text Analysis (Spiral Dynamics)
+- 📊 Results Visualization with Spiral Dynamics Levels
+- 🗂️ Recording History and Transcript Storage
+- 🗺️ Transformation Mapping and Progress Tracking
+- 🧘 Practice Library with Personalized Exercises
+- 🔐 Secure User Authentication
 
-## Deployment
+---
 
-Your project is live at:
+## 🧰 Technology Stack
 
-**[https://vercel.com/2100099002csit-7240s-projects/v0-ai-spiral-dynamics](https://vercel.com/2100099002csit-7240s-projects/v0-ai-spiral-dynamics)**
+### Frontend
+- **Framework**: Next.js 14 (App Router)
+- **UI**: React 18 + Tailwind CSS + shadcn/ui
+- **State**: React Hooks
+- **Icons**: Lucide React
 
-## Build your app
+### Backend
+- **Runtime**: Node.js with Next.js API Routes
+- **Authentication**: NextAuth.js (Credentials)
+- **Database**: MongoDB (via MongoDB Atlas)
 
-Continue building your app on:
+### APIs & Tools
+- **Speech Recognition**: Web Speech API
+- **Password Encryption**: bcryptjs
+- **Date Utilities**: date-fns
 
-**[https://v0.dev/chat/projects/GtsJworsde5](https://v0.dev/chat/projects/GtsJworsde5)**
+---
 
-## How It Works
+## 🧱 Architecture Overview
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- **Client**: Handles voice recording, text input, real-time transcription, and visualization.
+- **Server**: Manages authentication, analysis, storage, and API routing.
+- **Database**: Stores users, recordings, analysis results, practices, and transformation goals.
+
+### 🔁 Data Flow
+
+1. Voice/text is recorded or entered
+2. Text is sent to backend API for analysis
+3. Spiral Dynamics levels are computed
+4. Results are stored and returned
+5. Users can track historical data
+
+---
+
+## 🔐 Authentication
+
+- **User Auth**: Email + Password with NextAuth.js
+- **Security**: bcryptjs password hashing, JWT sessions, CSRF protection, secure cookies
+
+---
+
+## 🔍 Core Features Explained
+
+### 🎤 Voice Recorder
+- Records up to 30s of speech
+- Real-time transcription (Web Speech API)
+- Timer, error handling, visual feedback
+
+### 🧠 Text Analysis
+- NLP-based stage detection
+- Keyword + contextual matching
+- Scores and insights for each Spiral Dynamics level
+
+### 📊 Results Visualization
+- Color-coded level breakdown
+- Personal feedback & insights
+- Save and share results
+
+### 🗂️ Recording History
+- View past recordings + transcripts
+- Delete, play, and retrieve analyses
+
+### 🗺️ Transformation Map
+- Current and target stage mapping
+- Progress tracking over time
+
+### 🧘 Practice Library
+- Curated practices for each stage
+- Completion tracking + notes
+
+---
+
+## 📦 API Endpoints
+
+### Auth
+- `POST /api/auth/register` - Register user
+- `POST /api/auth/[...nextauth]` - Auth routes
+
+### Analysis
+- `POST /api/analyze-text` - Analyze input
+- `POST /api/analysis/save` - Save result
+
+### Recordings
+- `POST /api/recordings/save` - Save recording
+- `GET /api/recordings/get` - Get recordings
+
+### Reflections
+- `POST /api/reflection/save` - Save reflection
+- `GET /api/reflection/get` - Get reflections
+
+---
+
+## 🧩 Database Collections
+
+- **Users**: name, email, hashed password, current/target stage
+- **Recordings**: transcript, timestamp, duration, audio
+- **Analyses**: Spiral levels, dominant color, summary
+- **Practices**: stage, completed, notes
+- **Transformation Goals**: progress between stages
+
+---
+
+## 🚀 Deployment
+
+- **Platform**: Vercel (Frontend + Backend)
+- **Database**: MongoDB Atlas
+- **Secrets**: Stored in environment variables
+
+---
+
+## 🌱 Future Plans
+
+- Voice tone/emotion analysis
+- Comparative progress insights
+- PDF report export
+- Community sharing & feedback
+- Mobile App + Wearables Integration
+- Multi-language support
+
+---
+
+## 🤝 Contributing
+Sri Namratha Maddineni
